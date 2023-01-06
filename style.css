@@ -1,9 +1,6 @@
-* {
-    margin: 0;
-    
+body {
+    background-color: gray;
 }
-
-
 
 
 #main-container {
@@ -15,25 +12,82 @@
 
 #left-menu{
     width: 256px;
-    height: 514px;
+    height: 482px;
     background-color: lightblue;
     margin-right: 3rem;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="color"] {
+	cursor: pointer;
+	width: 75px;
+	height: 75px;
+	border: none;
+    border-radius: 40px;
+    background-color: transparent;
+    
+}
+
+input[type="range"] {
+	cursor: pointer;
+}
+
+.button {
+    backface-visibility: hidden;
+    background-color: #1b30ac;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 #grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    width: 512px;
-    flex-shrink: 0;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    border: 5px solid white;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
 }
 
-.square {
-    padding: 15px;
-    background-color: white;
+.box {
     border: 1px solid black;
-}
-
-.hover{
-    background-color: blue ;
 }

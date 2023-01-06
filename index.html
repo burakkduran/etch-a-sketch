@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <!-- Main Container -->
     <div id="main-container">
       <!-- Left Menu -->
       <div id="left-menu">
-        
+        <!-- <input id="colorPicker" type="color" value="#cccccc"> -->
+        <div class="buttons">
+          <button class="button" id="normalBrush">Normal</button>
+          <button class="button" id="rainbowBrush">Rainbow</button>
+          <button class="button" id="eraser">Eraser</button>
+          <button class="button" id="clearCanvas">Clear Canvas</button>
+        </div>
+        <label for="canvasSize">Change canvas size</label>
+        <input id="canvasSize" type="range" name="canvasSize" min="2" max="32" value="16" step="2">
+        <div id="sizeShower"></div>
       </div>
       <!-- Grid Container -->
       <div id="grid-container"></div>
