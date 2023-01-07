@@ -86,6 +86,7 @@ input[type="range"] {
     border-radius: 5px;
     height: 575px;
     width: 575px;
+    background-color: #fff;
 }
 
 .box {
